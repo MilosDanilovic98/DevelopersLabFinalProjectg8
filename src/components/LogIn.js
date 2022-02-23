@@ -37,11 +37,19 @@ const Login = () => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      console.log(JSON.stringify(response?.data));
-      //console.log(JSON.stringify(response));
+
       const access = response?.data?.access;
-      const roles = response?.data?.groupes;
-      console.log(response);
+
+      const isAdmin = response?.data?.is_staff;
+
+      const roles = [];
+
+      if (isAdmin) {
+        roles.push(1, 2);
+      } else {
+        roles.push(1);
+      }
+
       setAuth({ user, pwd, roles, access });
       setUser("");
       setPwd("");
