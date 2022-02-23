@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Register from "./components/Register";
+import Login from "./components/LogIn";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Admin from "./components/Admin";
+import RequireAuth from "./components/RequireAuth";
+import Unauthorized from "./components/Unauthorized";
+import User from "./components/User";
+import LinkPage from "./components/LinkPage";
 
+const ROLES = {
+  User: 1,
+  Admin: 2,
+};
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        {/* public routes */}
+        <Route path="/" element={<Layout />}>
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="unauthorized" element={<Unauthorized />} />
+          <Route path="/" element={<LinkPage />} />
+
+          {/* admin routes */}
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
+            <Route path="admin" element={<Admin />} />
+          </Route>
+
+          <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+            <Route path="user" element={<User />} />
+          </Route>
+
+          {/* add 404 page */}
+        </Route>
+      </Routes>
     </div>
   );
 }
