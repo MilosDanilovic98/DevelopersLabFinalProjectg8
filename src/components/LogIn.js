@@ -69,7 +69,16 @@ const Login = () => {
   };
 
   return (
-    <div className="page-login" style={{ paddingTop: "10rem" }}>
+    <div
+      className="page-login"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        background: "black",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
       <div className="ui centered aligned grid container">
         <div className="nine wide column">
           <div

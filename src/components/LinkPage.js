@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-
+import Slider from "./Slider";
 const LinkPage = () => {
   return (
     <section>
+      <Slider></Slider>
       <h1>Links</h1>
       <br />
       <h2>Public</h2>
