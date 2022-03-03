@@ -50,15 +50,15 @@ const Unauthorized = () => {
                 {/* Grid column */}
                 <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                   {/* Content */}
-                  <h6 className="text-uppercase fw-bold">Company name</h6>
+                  <h6 className="text-uppercase fw-bold">Game World!</h6>
                   <hr
                     className="mb-4 mt-0 d-inline-block mx-auto"
                     style={{ width: 60, backgroundColor: "#7c4dff", height: 2 }}
                   />
                   <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
+                    Welcome to our page!Please feal free to contact us about
+                    anything and we will do our best to give u a response as
+                    soon as possible!
                   </p>
                 </div>
                 {/* Grid column */}
@@ -72,17 +72,17 @@ const Unauthorized = () => {
                   />
                   <p>
                     <a href="#!" className="text-white">
-                      MDBootstrap
+                      Lorem, ipsum dolor.
                     </a>
                   </p>
                   <p>
                     <a href="#!" className="text-white">
-                      MDWordPress
+                      Lorem, ipsum dolor.
                     </a>
                   </p>
                   <p>
                     <a href="#!" className="text-white">
-                      BrandFlow
+                      Lorem, ipsum dolor.
                     </a>
                   </p>
                   <p>
@@ -154,10 +154,8 @@ const Unauthorized = () => {
             className="text-center p-3"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
           >
-            © 2020 Copyright:
-            <a className="text-white" href="https://mdbootstrap.com/">
-              MDBootstrap.com
-            </a>
+            © 2022 Copyright:
+            <a className="text-white">GameWorld.com</a>
           </div>
           {/* Copyright */}
         </footer>

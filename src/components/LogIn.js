@@ -49,8 +49,8 @@ const Login = () => {
       } else {
         roles.push(1);
       }
-
-      setAuth({ user, pwd, roles, access, loggedIn: true });
+      console.log(access);
+      setAuth({ user, pwd, roles, access, loggedIn: true, isAdmin });
       setUser("");
       setPwd("");
       navigate(from, { replace: true });

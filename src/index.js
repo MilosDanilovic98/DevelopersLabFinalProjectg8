@@ -5,14 +5,20 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AuthProvider } from "./context/AuthProvider";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/Theme";
+import bootstrap from "bootstrap";
+import "bootstrap/dist/css/bootstrap.css";
+// import "../src/styles/custom.scss";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthProvider>
-        <Routes>
-          <Route path="/*" element={<App />} />
-        </Routes>
+        <ThemeProvider>
+          <Routes>
+            <Route path="/*" element={<App />} />
+          </Routes>
+        </ThemeProvider>
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>,
