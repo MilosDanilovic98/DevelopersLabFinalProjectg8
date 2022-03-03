@@ -88,155 +88,223 @@ const Register = () => {
     }
   };
   return (
-    <div className="page-register" style={{ paddingTop: "10rem" }}>
-      <div className="ui centered aligned grid container">
-        <div className="nine wide column">
-          <div
-            ref={errRef}
-            className={errMsg ? "ui icon warning message" : "offscreen"}
-          >
-            <i className="lock icon"></i>
-            <div className="content"></div>
-            <div className="header">{errMsg}</div>
-          </div>
-          <h1 className="">Register with us!</h1>
-          <div className="ui fluid card">
-            <div className="content ">
-              <form onSubmit={handleSubmit} className="ui yellow form">
-                <div className="field">
-                  <label htmlFor="username">Username:</label>
-                  <input
-                    type="text"
-                    id="username"
-                    ref={userRef}
-                    autoComplete="off"
-                    onChange={(e) => setUser(e.target.value)}
-                    value={user}
-                    required
-                    onFocus={() => setUserFocus(true)}
-                    onBlur={() => setUserFocus(false)}
-                  />
-                  <p
-                    className={
-                      userFocus && user && !validName
-                        ? "instructions"
-                        : "offscreen"
-                    }
+    <section
+      className="  py-5"
+      style={{
+        background: "#6a11cb",
+      }}
+    >
+      <div className="container py-5 h-100">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div
+              className="card bg-dark text-white"
+              style={{ borderRadius: "1rem" }}
+            >
+              <div className="card-body p-5 text-center">
+                <div className="mb-md-5 mt-md-4 pb-5">
+                  <div
+                    ref={errRef}
+                    className={errMsg ? "alert alert-warning " : ""}
+                    role="alert"
                   >
-                    4 to 24 characters.
-                    <br />
-                    Must begin with a letter.
-                    <br />
-                    Letters, numbers, underscores, hyphens allowed.
+                    <h4 className="alert-heading">{errMsg}</h4>
+                  </div>
+                  <h2 className="fw-bold mb-2 text-uppercase">REGISTER</h2>
+                  <p className="text-white-50 mb-5">Join us!</p>
+                  <form onSubmit={handleSubmit}>
+                    <div className="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="username"
+                        ref={userRef}
+                        autoComplete="off"
+                        onChange={(e) => setUser(e.target.value)}
+                        value={user}
+                        required
+                        onFocus={() => setUserFocus(true)}
+                        onBlur={() => setUserFocus(false)}
+                        className="form-control form-control-lg"
+                      />
+                      <p
+                        className={
+                          userFocus && user && !validName
+                            ? "alert alert-danger "
+                            : "d-none"
+                        }
+                      >
+                        4 to 24 characters.
+                        <br />
+                        Must begin with a letter.
+                        <br />
+                        Letters, numbers, underscores, hyphens allowed.
+                      </p>
+                      <label
+                        className="form-label form-white mb-4"
+                        htmlFor="username"
+                      >
+                        Username
+                      </label>
+                    </div>
+
+                    <div className="form-outline form-white mb-4">
+                      <input
+                        type="password"
+                        id="password"
+                        onChange={(e) => setPwd(e.target.value)}
+                        value={pwd}
+                        required
+                        onFocus={() => setPwdFocus(true)}
+                        onBlur={() => setPwdFocus(false)}
+                        className="form-control form-control-lg"
+                      />
+                      <p
+                        className={
+                          pwdFocus && !validPwd
+                            ? "alert alert-danger "
+                            : "d-none"
+                        }
+                      >
+                        8 to 24 characters.
+                        <br />
+                        Must include uppercase and lowercase letters, a number
+                        and a special character.
+                        <br />
+                        Allowed special characters: <span>!</span>{" "}
+                        <span>@</span> <span>#</span> <span>$</span>{" "}
+                        <span>%</span>
+                      </p>
+                      <label
+                        className="form-label form-white mb-4"
+                        htmlFor="password"
+                      >
+                        Password
+                      </label>
+                    </div>
+                    <div className="form-outline form-white mb-4">
+                      <input
+                        type="password"
+                        id="confirm_pwd"
+                        onChange={(e) => setMatchPwd(e.target.value)}
+                        value={matchPwd}
+                        required
+                        onFocus={() => setMatchFocus(true)}
+                        onBlur={() => setMatchFocus(false)}
+                        className="form-control form-control-lg"
+                      />
+                      <p
+                        className={
+                          matchFocus && !validMatch
+                            ? "alert alert-danger "
+                            : "d-none"
+                        }
+                      >
+                        Password does not match!
+                      </p>
+                      <label
+                        htmlFor="confirm_pwd"
+                        className="form-label form-white mb-4"
+                      >
+                        Confirm Password
+                      </label>
+                    </div>
+
+                    <div className="form-outline form-white mb-4">
+                      <input
+                        id="email"
+                        autoComplete="off"
+                        onChange={(e) => setEmail(e.target.value)}
+                        value={email}
+                        required
+                        onFocus={() => setEmailFocus(true)}
+                        onBlur={() => setEmailFocus(false)}
+                        className="form-control form-control-lg"
+                      />
+                      <p
+                        className={
+                          emailFocus && !validEmail
+                            ? "alert alert-danger "
+                            : "d-none"
+                        }
+                      >
+                        Not a Valid Email!
+                      </p>
+                      <label
+                        htmlFor="email"
+                        className="form-label form-white mb-4"
+                      >
+                        Email
+                      </label>
+                    </div>
+
+                    <div className="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="firstName"
+                        autoComplete="off"
+                        onChange={(e) => setFirstName(e.target.value)}
+                        value={firstName}
+                        className="form-control form-control-lg"
+                      />
+                      <label
+                        htmlFor="firstName"
+                        className="form-label form-white mb-4"
+                      >
+                        First Name
+                      </label>
+                    </div>
+
+                    <div className="form-outline form-white mb-4">
+                      <input
+                        type="text"
+                        id="lastName"
+                        autoComplete="off"
+                        onChange={(e) => setLastName(e.target.value)}
+                        value={lastName}
+                        className="form-control form-control-lg"
+                      />
+                      <label
+                        htmlFor="lastName"
+                        className="form-label form-white mb-4"
+                      >
+                        Last Name
+                      </label>
+                    </div>
+
+                    <button
+                      className="btn btn-outline-light btn-lg px-5"
+                      disabled={
+                        !validName || !validEmail || !validPwd || !validMatch
+                          ? true
+                          : false
+                      }
+                    >
+                      Register
+                    </button>
+                  </form>
+                  <div className="d-flex justify-content-center text-center mt-4 pt-1">
+                    <a href="#!" className="text-white">
+                      <i className="fa fa-facebook-f fa-lg" />
+                    </a>
+                    <a href="#!" className="text-white">
+                      <i className="fa fa-twitter fa-lg mx-4 px-2" />
+                    </a>
+                    <a href="#!" className="text-white">
+                      <i className="fa fa-google fa-lg" />
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <p className="mb-0 text-white-50 fw-bold">
+                    Don't have an account? <Link to="/register">Register</Link>
                   </p>
                 </div>
-                <div className="field">
-                  <label htmlFor="password">Password:</label>
-                  <input
-                    type="password"
-                    id="password"
-                    onChange={(e) => setPwd(e.target.value)}
-                    value={pwd}
-                    required
-                    onFocus={() => setPwdFocus(true)}
-                    onBlur={() => setPwdFocus(false)}
-                  />
-                  <p
-                    className={
-                      pwdFocus && !validPwd ? "instructions" : "offscreen"
-                    }
-                  >
-                    8 to 24 characters.
-                    <br />
-                    Must include uppercase and lowercase letters, a number and a
-                    special character.
-                    <br />
-                    Allowed special characters: <span>!</span> <span>@</span>{" "}
-                    <span>#</span> <span>$</span> <span>%</span>
-                  </p>
-                </div>
-                <div className="field">
-                  <label htmlFor="confirm_pwd">Confirm Password:</label>
-                  <input
-                    type="password"
-                    id="confirm_pwd"
-                    onChange={(e) => setMatchPwd(e.target.value)}
-                    value={matchPwd}
-                    required
-                    onFocus={() => setMatchFocus(true)}
-                    onBlur={() => setMatchFocus(false)}
-                  />
-                  <p
-                    className={
-                      matchFocus && !validMatch ? "instructions" : "offscreen"
-                    }
-                  >
-                    Password does not match!
-                  </p>
-                </div>
-                <div className="field">
-                  <label htmlFor="email">Email:</label>
-                  <input
-                    id="email"
-                    autoComplete="off"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    required
-                    onFocus={() => setEmailFocus(true)}
-                    onBlur={() => setEmailFocus(false)}
-                  />
-                  <p
-                    className={
-                      emailFocus && !validEmail ? "instructions" : "offscreen"
-                    }
-                  >
-                    Not a Valid Email!
-                  </p>
-                </div>
-                <div className="field">
-                  <label htmlFor="firstName">First Name:</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    autoComplete="off"
-                    onChange={(e) => setFirstName(e.target.value)}
-                    value={firstName}
-                  />
-                </div>
-                <div className="field">
-                  <label htmlFor="lastName">Last Name:</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    autoComplete="off"
-                    onChange={(e) => setLastName(e.target.value)}
-                    value={lastName}
-                  />
-                </div>
-                <button
-                  disabled={
-                    !validName || !validEmail || !validPwd || !validMatch
-                      ? true
-                      : false
-                  }
-                  className="ui primary labeled icon button"
-                >
-                  <i className="unlock alternate icon"></i>
-                  Register
-                </button>
-              </form>
-              <p>
-                You already have an account?
-                <br />
-                <span className="line">
-                  <Link to="/login">Log in</Link>
-                </span>
-              </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
