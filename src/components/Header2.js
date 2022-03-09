@@ -49,22 +49,22 @@ const Header = () => {
                     <li class="nav-item">
                         <a class="nav-link" href="#" ><span class="yellowText">Contact us</span></a>
                     </li>
-                    <li class="nav-item icon-custom dropdown">
+                    <li class="nav-item icon-custom dropleft">
                         <a role="button" id="dropdownMenuLink" data-toggle="dropdown" 
                         class="nav-link dropdown-toggle d-flex align-items-center"
                         data-mdb-toggle="dropdown"
                         aria-expanded="false">
                             <span class="iconify yellowText" data-icon="bi:person-fill"></span>
                         </a>
-                        <div class="dropdown-menu yellowText" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-menu yellowText dropdown-menu1" aria-labelledby="dropdownMenuLink">
                             {!isLoggedin && (
-                                <a class="dropdown-item" href="#" onClick={login}>Log in</a>
+                                <a class="dropdown-item dropdownText" href="#" onClick={login}>Log in</a>
                             )}
                             {!isLoggedin && (
-                                <a class="dropdown-item" href="#" onClick={register}>Sign up</a>
+                                <a class="dropdown-item dropdownText" href="#" onClick={register}>Sign up</a>
                             )}
                             {isLoggedin && (
-                                <a class="dropdown-item" href="#" onClick={signOut}>Log out</a>
+                                <a class="dropdown-item dropdownText" href="#" onClick={signOut}>Log out</a>
                             )}
                         </div>
                     </li>
@@ -104,7 +104,7 @@ const Header = () => {
         <div class="container-fluid container2">
             <ul class="navbar-nav navbar-nav-custom">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" onClick={home}><span class="grayBox">HOME</span></a>
+                    <a class="nav-link" onClick={home}><span class="grayBox">HOME</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span class="grayBox">TOP RATED</span></a>
@@ -112,9 +112,38 @@ const Header = () => {
                 <li class="nav-item">
                     <a class="nav-link" href="#"><span class="grayBox">RECENTLY ADDED</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="grayBox">CATEGORY</span></a>
+                <li class="nav-item dropdown">
+                    <a role="button" id="dropdownMenuLink" data-toggle="dropdown" 
+                        class="nav-link dropdown-toggle "
+                        data-mdb-toggle="dropdown"
+                        aria-expanded="false" class="nav-link" href="#"><span class="grayBox dropdown-toggle" data-bs-toggle="dropdown">CATEGORY</span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Adventure</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Arcade</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Card & Board Game</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Fighting</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Hack and slash/Beat 'em up</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Indie</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Music</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">MOBA</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Pinball</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Platform</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Point-and-click</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Puzzle</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Quiz/Trivia</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Racing</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Real Time Strategy (RTS)</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Role-playing (RPG)</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Simulator</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Sport</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Strategy</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Shooter</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Turn-based strategy (TBS)</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Tactical</a></li>
+                        <li class="dropdown-item"><a class="dropdownText" href="#">Visual Novel</a></li>
+                    </ul>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link">
                         <div class="search">
