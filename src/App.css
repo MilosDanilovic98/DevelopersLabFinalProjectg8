@@ -52,10 +52,6 @@
     /*overflow: hidden;*/
     background-color: black;
 }
-.navbar-custom2 {
-  margin-top: -0.8rem;
-  background-color: transparent;
-}
 .container-fluid {
     /*position: absolute;*/
     top: 0;
@@ -109,7 +105,6 @@
     font-weight: bolder;
     padding: 0.2rem 0.7rem 0.2rem 0.7rem;
     border-radius: 0.5rem;
-    
 }
 .yellowBox {
     border-color: #292524;
@@ -163,4 +158,50 @@
 }
 .navbar {
   padding: 0;
+}
+.navbar-custom2 {
+  margin-top: -0.8rem;
+  background-color: transparent;
+}
+
+/*dropdown settings*/
+.dropdown-menu {
+  max-height: 280px;
+  overflow-y: auto;
+}
+.dropdownText {
+  color: gray;
+  font-family: 'Kanit', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-size: small;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+}
+.dropdown-menu1 {
+  right:0;
+  
+}
+
+/*span.dropdown-toggle::after{
+  color:#bf8e0b;
+}
+span.dropdown-toggle:hover{
+  color: #292524;
+}*/
+
+/*setting slider below navbar*/
+html, body {
+  height: 100%; /*Fixes the height to 100% of the viewport*/
+}
+body {
+  padding-top: 	4.95rem; /*5.4375 = 87px --- 50px for the height of the navbar + 37px for the offset*/
+  padding-bottom: 3.125rem; /*3.125rem = 50px for the height of the bottom navbar*/
+}
+.navbar-offset {
+    top: 2.3125rem; /*Offsets the top navbar 37px from the top of the viewport*/
+}
+.container-fluid.scrollable {
+  height: 100%; /*Sets the scrollable area to 100% of the viewport*/
+  overflow: auto; /*Allows the scrollable area to have a scrollbar based on the height of its content*/
+  /*background: #ccc;*/
 }

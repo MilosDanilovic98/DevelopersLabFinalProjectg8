@@ -175,7 +175,7 @@ function Slider() {
                   </p>
                   <button
                     type="button"
-                    className="btn btn-primary"
+                    className="btn btn-primary border-light"
                     onClick={openModal}
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
@@ -184,6 +184,7 @@ function Slider() {
                     data-bs-rating={slideItems[0].IGDB_rating}
                     data-bs-date={slideItems[0].realise_date}
                     data-bs-image={slideItems[0].image}
+                    style={{ backgroundColor: "#bf8e0b" }}
                   >
                     Read More
                   </button>
@@ -203,7 +204,7 @@ function Slider() {
                   </p>
                   <button
                     type="button"
-                    className="btn btn-primary"
+                    className="btn btn-primary border-light"
                     onClick={openModal}
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
@@ -212,6 +213,7 @@ function Slider() {
                     data-bs-rating={slideItems[1].IGDB_rating}
                     data-bs-date={slideItems[1].realise_date}
                     data-bs-image={slideItems[1].image}
+                    style={{ backgroundColor: "#bf8e0b" }}
                   >
                     Read More
                   </button>
@@ -231,7 +233,7 @@ function Slider() {
                   </p>
                   <button
                     type="button"
-                    className="btn btn-primary"
+                    className="btn btn-primary border-light"
                     onClick={openModal}
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
@@ -240,6 +242,7 @@ function Slider() {
                     data-bs-rating={slideItems[2].IGDB_rating}
                     data-bs-date={slideItems[2].realise_date}
                     data-bs-image={slideItems[2].image}
+                    style={{ backgroundColor: "#bf8e0b" }}
                   >
                     Read More
                   </button>
@@ -265,7 +268,7 @@ function Slider() {
                     </p>
                     <button
                       type="button"
-                      className="btn btn-primary"
+                      className="btn btn-primary border-light"
                       onClick={openModal}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
@@ -274,6 +277,7 @@ function Slider() {
                       data-bs-rating={slideItems[3].IGDB_rating}
                       data-bs-date={slideItems[3].realise_date}
                       data-bs-image={slideItems[3].image}
+                      style={{ backgroundColor: "#bf8e0b" }}
                     >
                       Read More
                     </button>
@@ -293,7 +297,7 @@ function Slider() {
                     </p>
                     <button
                       type="button"
-                      className="btn btn-primary"
+                      className="btn btn-primary border-light"
                       onClick={openModal}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
@@ -302,6 +306,7 @@ function Slider() {
                       data-bs-rating={slideItems[4].IGDB_rating}
                       data-bs-date={slideItems[4].realise_date}
                       data-bs-image={slideItems[4].image}
+                      style={{ backgroundColor: "#bf8e0b" }}
                     >
                       Read More
                     </button>
@@ -321,7 +326,7 @@ function Slider() {
                     </p>
                     <button
                       type="button"
-                      className="btn btn-primary"
+                      className="btn btn-primary border-light"
                       onClick={openModal}
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
@@ -330,6 +335,7 @@ function Slider() {
                       data-bs-rating={slideItems[5].IGDB_rating}
                       data-bs-date={slideItems[5].realise_date}
                       data-bs-image={slideItems[5].image}
+                      style={{ backgroundColor: "#bf8e0b" }}
                     >
                       Read More
                     </button>
@@ -355,7 +361,7 @@ function Slider() {
                   </p>
                   <button
                     type="button"
-                    className="btn btn-primary"
+                    className="btn btn-primary border-light"
                     onClick={openModal}
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
@@ -364,6 +370,7 @@ function Slider() {
                     data-bs-rating={slideItems[6].IGDB_rating}
                     data-bs-date={slideItems[6].realise_date}
                     data-bs-image={slideItems[6].image}
+                    style={{ backgroundColor: "#bf8e0b" }}
                   >
                     Read More
                   </button>
@@ -383,7 +390,7 @@ function Slider() {
                   </p>
                   <button
                     type="button"
-                    className="btn btn-primary"
+                    className="btn btn-primary border-light"
                     onClick={openModal}
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
@@ -392,6 +399,7 @@ function Slider() {
                     data-bs-rating={slideItems[7].IGDB_rating}
                     data-bs-date={slideItems[7].realise_date}
                     data-bs-image={slideItems[7].image}
+                    style={{ backgroundColor: "#bf8e0b" }}
                   >
                     Read More
                   </button>
@@ -411,7 +419,7 @@ function Slider() {
                   </p>
                   <button
                     type="button"
-                    className="btn btn-primary"
+                    className="btn btn-primary border-light"
                     onClick={openModal}
                     data-bs-toggle="modal"
                     data-bs-target="#exampleModal"
@@ -420,6 +428,9 @@ function Slider() {
                     data-bs-rating={slideItems[8].IGDB_rating}
                     data-bs-date={slideItems[8].realise_date}
                     data-bs-image={slideItems[8].image}
+                    style={{ 
+                      backgroundColor: "#bf8e0b"
+                    }}
                   >
                     Read More
                   </button>
@@ -444,8 +455,8 @@ function Slider() {
           data-bs-target="#myCarousel"
           data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true" />
           <span className="text-white ">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true" />
         </a>
       </div>
     </div>

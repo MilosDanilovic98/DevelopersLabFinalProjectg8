@@ -11,32 +11,32 @@ const Unauthorized = () => {
           {/* Section: Social media */}
           <section
             className="d-flex justify-content-between p-4"
-            style={{ backgroundColor: "#6351ce" }}
+            style={{ backgroundColor: "black" }}
           >
             {/* Left */}
             <div className="me-5">
-              <span>Get connected with us on social networks:</span>
+              <span className="yellowText">Get connected with us on social networks:</span>
             </div>
             {/* Left */}
             {/* Right */}
-            <div>
-              <a href="" className="text-white me-4 px-2">
-                <i className="fa fa-facebook-f" />
+            <div >
+              <a href="" className="text-white me-4 px-2" >
+                <i className="fa fa-facebook-f" style={{ color: "#f1e1ab" }}/>
               </a>
               <a href="" className="text-white me-4 px-2">
-                <i className="fa fa-twitter" />
+                <i className="fa fa-twitter" style={{ color: "#f1e1ab" }}/>
               </a>
               <a href="" className="text-white me-4 px-2">
-                <i className="fa fa-google" />
+                <i className="fa fa-google" style={{ color: "#f1e1ab" }}/>
               </a>
               <a href="" className="text-white me-4 px-2">
-                <i className="fa fa-instagram" />
+                <i className="fa fa-instagram" style={{ color: "#f1e1ab" }}/>
               </a>
               <a href="" className="text-white me-4 px-2">
-                <i className="fa fa-linkedin" />
+                <i className="fa fa-linkedin" style={{ color: "#f1e1ab" }}/>
               </a>
               <a href="" className="text-white me-4 px-2">
-                <i className="fa fa-github" />
+                <i className="fa fa-github" style={{ color: "#f1e1ab" }}/>
               </a>
             </div>
             {/* Right */}
